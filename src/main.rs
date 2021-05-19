@@ -16,7 +16,8 @@ const GAME_NAME: &str = "TYPING_SPEED";
 const GAME_DISPLAY_NAME: &str = "Typing Speed Display";
 const DEVELOPER: &str = "Anton Ekström";
 const EVENT_NAME_SPEED: &str = "EVENT";
-const OLED_TIMEOUT_MILLIS: isize = 3000;
+const OLED_TIMEOUT_MILLIS: isize = 7000;
+const TYPING_SPEED_TIMEFRAME_SECONDS: u64 = 15;
 
 #[derive(Clone, Eq, PartialEq, Debug)]
 enum TrayIconEvent {
@@ -48,7 +49,7 @@ fn main() {
                     if state == ElementState::Pressed {
                         tracker.press_key();
                         
-                        let timespan = Duration::from_secs(15);
+                        let timespan = Duration::from_secs(TYPING_SPEED_TIMEFRAME_SECONDS);
                         send_wpm(&mut client, tracker.typing_speed_within_timespan(timespan).wpm() as isize);
                     }
                 }
