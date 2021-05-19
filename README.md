@@ -20,6 +20,7 @@ Build the program by running `cargo build --bins --release`. Afterwards you can 
 - Currently, any key counts as a keypress (such as backspace which WHACK haha)
 - Make github action for building releases
 - Add tests (lol)
+- Autostart program
 
 ## How it works
 Tracks your key presses and when they occur. Computes the typing speed by counting the keys that were pressed during the last 15 seconds and displays the typing speed as WPM (Words Per Minute) on the OLED display anytime you press a key. Key presses are cleared if the next key press takes longer than 7 seconds.
