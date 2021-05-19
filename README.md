@@ -1,0 +1,2 @@
+# Typing Speed Indicator 
+😎😎😎
