@@ -4,7 +4,7 @@ Typing speed indicator for SteelSeries GameSense built with Rust. 😎😎😎
 Shows typing speed on the little OLED on your SteelSeries Apex 7 keyboard.
 
 ## Build for production
-Build the program by running `cargo build --bins --release`. Afterwards you can find the binaries in `target/release`. You will need Rust or Cargo to be installed.
+Build the program by running `cargo build --bins --release`. Afterwards you can find the binaries in `target/release`. You will need Rust and Cargo or something to be installed.
 
 ## To-Do
 - Show more information on the display. Ideas:
@@ -16,7 +16,7 @@ Build the program by running `cargo build --bins --release`. Afterwards you can 
 - Change keyboard illumination based on typing speed. Cold blue or white can gradually change to red when typing fast 😎😎
 - Allow for adjusting timings somehow, I think there's something built into GameSense
 - Adjust WPM timeframe while typing, like decreasing it when you begin typing or something
-- Put binaries on Github as a release
+- ~~Put binary on Github as a release~~
 
 ## How it works
 Tracks your key presses and when they occur. Computes the typing speed by counting the keys that were pressed during the last 15 seconds and displays the typing speed as WPM (Words Per Minute) on the OLED display anytime you press a key. Key presses are cleared if the next key press takes longer than 7 seconds.
